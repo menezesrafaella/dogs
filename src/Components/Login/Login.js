@@ -5,6 +5,7 @@ import CreateUser from './CreateUser'
 import ForgotPassword from './ForgotPassword'
 import ResetPassword from './ResetPassword'
 import { UserContext } from '../../UserContext'
+import styles from './Login.module.css'
 
 const Login = () => {
   const {login} = useContext(UserContext)
@@ -12,15 +13,17 @@ const Login = () => {
   if(login === true) return <Navigate to="/conta" />
 
   return (
-    <div>
+    <section className={styles.login}>
+      <div className={styles.forms}>
         <Routes>
-            <Route path="/" element={<LoginForm />} />
-            <Route path="create" element={<CreateUser />} />
-            <Route path="forget-password" element={<ForgotPassword />} />
-            <Route path="reset-password" element={<ResetPassword />} />
-
-        </Routes>
-    </div>
+              <Route path="/" element={<LoginForm />} />
+              <Route path="create" element={<CreateUser />} />
+              <Route path="forget-password" element={<ForgotPassword />} />
+              <Route path="reset-password" element={<ResetPassword />} />
+          </Routes>
+      </div>
+        
+    </section>
   )
 }
 
