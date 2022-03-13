@@ -14,10 +14,10 @@ const Header = () => {
         </Link>
         {data ? (
           <>
-            <Link className={styles.login} to="/conta">
+            <Link className={styles.login} to="/user">
               {data.nome}
+              <button onClick={logout}>Sair</button>
             </Link>
-            <button onClick={logout}>Sair</button>
           </>
         ) : (
           <Link className={styles.login} to="/login">

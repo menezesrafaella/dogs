@@ -10,7 +10,7 @@ import styles from './Login.module.css'
 const Login = () => {
   const {login} = useContext(UserContext)
 
-  if(login === true) return <Navigate to="/conta" />
+  if(login === true) return <Navigate to="/user" />
 
   return (
     <section className={styles.login}>
