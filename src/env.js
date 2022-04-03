@@ -121,3 +121,16 @@ export function PHOTO_DELETE(id) {
       }
     }
   }
+
+  export function PASSWORD_RESET(body) {
+    return {
+      url: API_URL + '/api/password/reset',
+      options: {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json",
+        },
+        BODY: JSON.stringify(body)
+      }
+    }
+  }
