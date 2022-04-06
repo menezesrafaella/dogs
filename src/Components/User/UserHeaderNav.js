@@ -35,7 +35,7 @@ const UserHeaderNav = () => {
         <NavLink end to="/user">
           <MyFeed /> {mobile && "Minhas fotos"}
         </NavLink>
-        <NavLink to="/user/statistics">
+        <NavLink to="/user/statistic">
           <Statistics /> {mobile && "Estatisticas"}
         </NavLink>
         <NavLink to="/user/post">

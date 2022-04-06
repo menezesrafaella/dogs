@@ -9,7 +9,7 @@ const UserHeader = () => {
     useEffect(() => {
         const {pathname} = location
         switch (pathname) {
-            case '/user/statistics':
+            case '/user/statistic':
                 setTitle('Estatísticas');
                 break;
             case '/user/feed':
